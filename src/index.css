@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+IT+Moderna:wght@100..400&display=swap");
 @import "tailwindcss";
 
 :root {
@@ -9,8 +10,10 @@ html,
 body {
   width: 100dvw;
   overflow-x: hidden;
-  background-color: var(--background-color);
-  color: var(--primary-text-color);
+  /* background-color: var(--background-color); */
+  background-color: black;
+  /* color: var(--primary-text-color); */
+  color: white;
   scroll-behavior: smooth;
   font-family: "Mona Sans", sans-serif;
 }
@@ -106,15 +109,22 @@ section {
     @apply fixed w-full left-1/2 py-5 px-5 md:px-20 -translate-x-1/2 z-[100] transition-all duration-300 ease-in-out;
 
     &.scrolled {
-      @apply top-0 bg-black;
+      @apply top-0 bg-transparent;
     }
 
     &.not-scrolled {
-      @apply md:top-10 top-0 bg-transparent;
+      @apply md:top-10 top-0 bg-black;
     }
 
     .inner {
       @apply mx-auto flex items-center justify-between;
+    }
+
+    a.logo {
+      font-family: "Dancing Script", cursive;
+      font-optical-sizing: auto;
+      font-weight: 600;
+      font-style: normal;
     }
 
     .logo {
@@ -135,7 +145,7 @@ section {
           }
 
           .underline {
-            @apply absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full;
+            @apply absolute -bottom-1 left-0 w-0 h-0.75 rounded-2xl bg-white transition-all duration-600 group-hover:w-full;
           }
         }
       }
